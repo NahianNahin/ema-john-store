@@ -1,0 +1,28 @@
+.order {
+    display: grid;
+    grid-template-columns: 4fr 2.5fr;
+}
+
+.select-product-container {
+    margin-top: 50px;
+    padding: 35px;
+}
+
+.order-cart-container {
+    width: 300px;
+    height: 350px;
+    margin-top: 70px;
+    padding: 50px;
+    background-color: rgba(255, 153, 0, 0.3);
+    border-radius: 5px;
+}
+
+.order-cart-container .heading {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    margin: 0;
+    
+}

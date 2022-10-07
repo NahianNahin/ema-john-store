@@ -18,6 +18,16 @@
 .order-summary{
     background: rgba(255, 153, 0, 0.3);
     padding: 20px;
+    
 
 }
+h2{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: #1C2B35;
+    text-align: center;
 
+}
