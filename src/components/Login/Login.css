@@ -1,0 +1,143 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+    width: 460px;
+    height: auto;
+    background: #FFFFFF;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: -8px 8px rgba(255, 224, 179, 1)
+}
+
+.form-box h2 {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    letter-spacing: 0.0025em;
+    color: #2A414F;
+}
+
+.form-control {
+
+    width: 415px;
+    height: 84px;
+    margin-bottom: 20px;
+
+}
+
+.form-control label {
+    display: block;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    color: #2A414F;
+    margin-bottom: 10px;
+}
+
+.form-control input {
+    width: 90%;
+    height: 55px;
+    border: 1px solid #95A0A7;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.form-btn {
+
+    width: 100%;
+    height: 55px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+    background: rgba(255, 153, 0, 0.3);
+    color: #0E161A;
+    border: 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-btn:hover {
+    background: rgba(255, 153, 0, 0.8);
+
+}
+
+.text-style {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.0025em;
+    color: #2A414F;
+}
+
+.text-style a {
+    text-decoration: none;
+    color: rgba(255, 153, 0, 1);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    width: 145px;
+    height: 0px;
+    border: 1px solid #95A0A7;
+}
+
+.google-form-btn {
+    width: 100%;
+    height: 55px;
+    margin-top: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(149, 160, 167, 1);
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.005em;
+    color: #2A414F;
+    text-align: center;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.google-form-btn img {
+    width: 26px;
+    height: 26px;
+    border-radius: 5px;
+    margin: 0;
+}
+.error-text{
+    color: rgb(176, 42, 42);
+    font-family: 'Lato';
+    font-weight: 700;
+}
+.success-text{
+    color: green;
+    font-family: 'Lato';
+    font-weight: 700;
+}

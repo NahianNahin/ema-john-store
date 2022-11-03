@@ -1,17 +1,10 @@
 import React, { useContext, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import './Login.css';
-import Google from '../../google.png'
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/UseContext';
+import Google from '../../google.png'
 
-
-
-
-const Login = () => {
-    const location = useLocation();
-    const from = location.state?.from?.pathname || '/';
-    const navigate = useNavigate();
-    const { loginUser } = useContext(AuthContext);
+const Signup = () => {
+    const { createUser } = useContext(AuthContext);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState(false);
     const handleSubmit = (event) => {
@@ -20,44 +13,52 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
+        const confirmPassword = form.confirm.value;
+        console.log(email, password, confirmPassword);
         if (password.length < 9) {
             setError('Password should be 8 character or more');
             return;
         };
-        console.log(email, password);
-        loginUser(email, password)
+        if (password !== confirmPassword) {
+            setError('Password not match!');
+            return;
+        };
+        createUser(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
                 setSuccess(true);
-                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error);
                 const message = error.message;
                 setError(message);
-            });
+            })
 
     }
     return (
         <div className='form-container'>
             <form className='form-box' onSubmit={handleSubmit}>
-                <h2>Login</h2>
+                <h2>Sign Up</h2>
                 <div className='form-control'>
                     <label htmlFor="email">Email</label>
                     <input type="email" name='email' required />
                 </div>
                 <div className='form-control'>
                     <label htmlFor="email">Password</label>
-                    <input type="Password" name='password' required />
+                    <input type="password" name='password' required />
+                </div>
+                <div className='form-control'>
+                    <label htmlFor="email">Confirm Password</label>
+                    <input type="password" name='confirm' required />
                 </div>
                 {
-                    (success === true) ? <p><small className='success-text'>Successfully Login!</small></p> :
+                    (success === true) ? <p><small className='success-text'>Successfully Sign Up!</small></p> :
                         <p><small className='error-text'>{error}</small></p>
                 }
-                <button className='form-btn'>Login</button>
-                <p className='text-style'>New to Ema-john? <Link to='/signup'>Create New Account</Link></p>
+                <button className='form-btn'>Sign Up</button>
+                <p className='text-style'>Already have an account?  <Link to='/login'>Login</Link></p>
                 <div className='divider'>
                     <hr />
                     <span>or</span>
@@ -69,4 +70,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Signup;

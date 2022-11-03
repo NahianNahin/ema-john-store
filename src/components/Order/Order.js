@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import OrderReview from '../../OrderReview/OrderReview';
+
 import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
+import OrderReview from '../OrderReview/OrderReview';
 import './Order.css';
 
 const Order = () => {
-    const { products, initialCart } = useLoaderData();
+    const {initialCart} = useLoaderData();
     const [cart, setCart] = useState(initialCart)
     console.log(cart);
     const handleDelete = id => {

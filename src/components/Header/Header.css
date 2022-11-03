@@ -7,6 +7,15 @@ nav{
     
 
 }
+.logo-user-info{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.logo-user-info span{
+    color: #FFF;
+    font-family: 'Lato';
+}
 img{
     width: 140px;
     height: 42.46px;
@@ -24,4 +33,18 @@ img{
 }
 .nav-link a:hover{
     color: orange;
+}
+.signout-btn{
+    width: 100px;
+    display: inline;
+    background-color: #FFF;
+    height: 50px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.0025em;
+    color: #2A414F;
 }

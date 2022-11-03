@@ -11,6 +11,8 @@ import Inventory from './components/Inventory/Inventory';
 import Login from './components/Login/Login';
 import Error from './components/Error/Error';
 import { productsAndCartLoader } from './loader/productsAndCartLoader';
+import Signup from './components/Signup/Signup';
+import PrivateRoute from './routes/PrivateRoute';
 
 
 function App() {
@@ -33,11 +35,15 @@ function App() {
         },
         {
           path: "/manage-inventory",
-          element: <Inventory></Inventory>
+          element: <PrivateRoute><Inventory></Inventory></PrivateRoute>
         },
         {
           path: "/login",
           element: <Login></Login>
+        },
+        {
+          path: "/signup",
+          element: <Signup></Signup>
         },
       ],
     },
